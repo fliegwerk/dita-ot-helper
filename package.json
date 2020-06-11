@@ -8,6 +8,7 @@
   "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "compile-readme": "node meta-tools/compile-readme.js",
     "prepublish": "npm run-script compile-readme"
   },

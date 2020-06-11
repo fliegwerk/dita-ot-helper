@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs')
+const path = require('path')
 
 /**
  * Reads a config file
@@ -9,22 +9,22 @@ const path = require("path");
  * @return {*} the JSON config file contents
  */
 module.exports = function (configFilePath) {
-  const realPath = path.resolve(process.cwd(), configFilePath);
+    const realPath = path.resolve(process.cwd(), configFilePath)
 
-  if (fs.existsSync(realPath) && fs.statSync(realPath).isFile()) {
-    const jsonText = fs.readFileSync(realPath).toString();
-    try {
-      return JSON.parse(jsonText);
-    } catch (e) {
-      console.error(
-        "Could not read JSON data in config file. Please re-check the validity of your config file"
-      );
-      process.exit(4);
+    if (fs.existsSync(realPath) && fs.statSync(realPath).isFile()) {
+        const jsonText = fs.readFileSync(realPath).toString()
+        try {
+            return JSON.parse(jsonText)
+        } catch (e) {
+            console.error(
+                'Could not read JSON data in config file. Please re-check the validity of your config file'
+            )
+            process.exit(4)
+        }
+    } else {
+        console.error(
+            `Could not read config file at ${realPath}. Please check that the process has permission to read that file.`
+        )
+        process.exit(3)
     }
-  } else {
-    console.error(
-      `Could not read config file at ${realPath}. Please check that the process has permission to read that file.`
-    );
-    process.exit(3);
-  }
-};
+}

@@ -20,6 +20,8 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - name: Linting
+        run: npm run lint
       - run: zip build.zip -r .
       - name: Upload artifact
         uses: actions/upload-artifact@v1

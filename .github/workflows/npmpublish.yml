@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - name: Linting
+        run: npm run lint
 
   publish-npm:
     needs: build
