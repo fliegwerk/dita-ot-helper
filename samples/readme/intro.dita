@@ -3,7 +3,6 @@
 <topic id="intro">
     <title>dita-ot-helper</title>
     <body>
-        <image href="logo.svg" width="240" id="image_sl3_cyh_zlb"/>
         <p>A little helper for automating some of the more tedious tasks of automation with the DITA
             Open Toolkit</p>
         <note>This README is compiled (using <cmdname>dita-ot-helper</cmdname>) from the DITA
