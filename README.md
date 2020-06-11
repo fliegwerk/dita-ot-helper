@@ -1,5 +1,7 @@
 # dita-ot-helper
 
+![](logo.svg)
+
 A little helper for automating some of the more tedious tasks of automation with the DITA Open Toolkit
 
 **Note:** This README is compiled \(using dita-ot-helper\) from the DITA sources in the /samples/readme folder. Direct changes to the README.md will get overwritten.
