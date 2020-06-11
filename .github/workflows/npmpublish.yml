@@ -15,9 +15,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Setup DITA-OT
-        run: wget https://github.com/dita-ot/dita-ot/releases/download/3.5.1/dita-ot-3.5.1.zip && unzip dita-ot-3.5.1.zip
+        run: wget https://github.com/dita-ot/dita-ot/releases/download/3.5.1/dita-ot-3.5.1.zip && unzip dita-ot-3.5.1.zip -d ../dita-ot
       - name: Add DITA-OT to path
-        run: echo "::add-path::/home/runner/work/dita-ot-helper/dita-ot-helper/dita-ot-3.5.1/bin"
+        run: echo "::add-path::/home/runner/work/dita-ot-helper/dita-ot/dita-ot-3.5.1/bin"
       - run: which dita
       - uses: actions/setup-node@v1
         with:
