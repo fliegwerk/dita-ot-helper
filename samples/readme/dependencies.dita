@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="dependencies">
+    <title>Dependencies</title>
+    <refbody>
+        <section id="section_dependencies">
+            <p>
+                <ul id="ul_bbc_dhh_zlb">
+                    <li>NodeJS, v10+</li>
+                    <li>on Windows: .NET Framework 4.5+ and Powershell 3 (preinstalled on WIndows
+                        8+)</li>
+                    <li><cmdname>dita</cmdname> from the <xref href="https://www.dita-ot.org/"
+                            format="html" scope="external">DITA Open Toolkit</xref>, version
+                        3.5+</li>
+                </ul>
+            </p>
+        </section>
+    </refbody>
+    
+</reference>

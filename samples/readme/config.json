@@ -1,0 +1,6 @@
+{
+  "input": "readme.ditamap",
+  "plugins": [
+  ],
+  "transtype": "markdown_github"
+}

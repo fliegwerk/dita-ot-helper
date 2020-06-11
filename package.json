@@ -1,0 +1,38 @@
+{
+  "name": "dita-ot-helper",
+  "version": "0.9.0",
+  "description": "A little helper for automating some of the more tedious tasks of automation with the DITA Open Toolkit",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-readme": "node meta-tools/compile-readme.js",
+    "prepare": "npm run-script compile-readme"
+  },
+  "keywords": [
+    "dita",
+    "dita-ot",
+    "automation",
+    "cli",
+    "pdf"
+  ],
+  "author": "fliegwerk",
+  "contributors": [
+    {
+      "email": "contact@pabloklaschka.de",
+      "name": "Pablo Klaschka",
+      "url": "https://github.com/pklaschka"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "cross-zip": "^3.1.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/shelljs": "^0.8.8"
+  }
+}

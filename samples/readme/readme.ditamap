@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map chunk="to-content">
+    <title>dita-ot-helper</title>
+    <topicref href="intro.dita">
+        <topicref href="abstract.dita"/>
+        <topicref href="documentation.dita">
+            <topicref href="dependencies.dita"/>
+            <topicref href="install_dita_ot_helper.dita"/>
+            <topicref href="compile_dita_documents.dita"/>
+            <topicref href="exit_codes.dita"/>
+            <topicref href="json_config_file.dita"/>
+        </topicref>
+    </topicref>
+</map>

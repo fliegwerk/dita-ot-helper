@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="abstract">
+    <title>Abstract</title>
+    <body>
+        <p>At its core, the goal of this project is to create an abstraction layer for the DITA Open
+            Toolkit compilation process that "fixes" a few pain-points. These "fixed" (to a degree)
+            aspects are:</p>
+        <ul id="ul_zqc_cdh_zlb">
+            <li>An easy-to-use project file system allowing easy automation</li>
+            <li>DITA OT Plugin dependencies (local and remote) for specific compilations</li>
+            <li>Local plugin reinstallation from a development directory. A documentation repository
+                contains a customized PDF plugin in a folder. <cmdname>dita-ot-helper</cmdname>
+                automatically (re-) installs this plugin before compiling.</li>
+        </ul>
+        <p>A config file can look as simple as this:</p>
+        <codeblock>{
+  "input": "input.dita",
+  "plugins": [
+    "org.dita.pdf2",
+    "./org.mypdf.plugin"
+  ],
+  "transtype": "companyPDF"
+}</codeblock>
+        <p>This automatically compiles using the local <filepath>org.mypdf.plugin</filepath>
+            folder's plugin. It also uses the <varname>companyPDF</varname>transtype this plugin
+            might defines.</p>
+        <p>With this config file, everything involved in compiling this (without the plugin being
+            pre-installed etc.) is running</p>
+        <codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> config.json</userinput></codeblock>
+        <p>from your command line. It's as easy as that.</p>
+    </body>
+</topic>

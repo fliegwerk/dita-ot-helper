@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="exit_codes">
+    <title>Exit codes</title>
+    <refbody>
+        <properties frame="all">
+            <prophead>
+                <proptypehd>Exit Code</proptypehd>
+                <propvaluehd>Description</propvaluehd>
+            </prophead>
+            <property>
+                <proptype>0</proptype>
+                <propvalue>It worked</propvalue>
+            </property>
+            <property>
+                <proptype>1</proptype>
+                <propvalue>Unknown error</propvalue>
+            </property>
+            <property>
+                <proptype>2</proptype>
+                <propvalue>Aborted due to missing dependencies</propvalue>
+            </property>
+            <property>
+                <proptype>3</proptype>
+                <propvalue>Aborted due to non-existent or non-readable config file</propvalue>
+            </property>
+            <property>
+                <proptype>4</proptype>
+                <propvalue>Aborted due to invalid config file</propvalue>
+            </property>
+        </properties>
+    </refbody>
+</reference>

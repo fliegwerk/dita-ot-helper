@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="json_config_file">
+    <title>JSON Config File</title>
+    <shortdesc>The project configuration file for the <cmdname>dita-ot-helper</cmdname>
+        tool.</shortdesc>
+    <refbody>
+        <section id="section_d2m_tnh_zlb">
+            <p>Using a JSON config file (which is required for using
+                    <cmdname>dita-ot-helper</cmdname>), you can define:<ul id="ul_s2p_24h_zlb">
+                    <li>required plugins</li>
+                    <li>the project input file</li>
+                    <li>the transtype that should get used</li>
+                </ul></p>
+            <p>The tool will then automatically install the plugins and compile the document
+                according to those specifications.</p>
+            <p>Below, you can find all the options you can put into your configuration
+                    file.<note>Your configuration file can have any possible filename. However, we
+                    recommend using <filepath>dita-ot-helper.json</filepath> or
+                        <filepath>config.json</filepath> for clarity.</note></p>
+        </section>
+        <section id="section_n1f_y4h_zlb">
+            <title>JSON object properties</title>
+        </section>
+        <properties frame="all" id="properties_config_json">
+            <prophead>
+                <proptypehd>JSON field</proptypehd>
+                <propvaluehd>Type</propvaluehd>
+                <propdeschd>Description</propdeschd>
+            </prophead>
+            <property>
+                <proptype><codeph>input</codeph></proptype>
+                <propvalue><codeph>string</codeph></propvalue>
+                <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path to
+                    your input file.</propdesc>
+            </property>
+            <property>
+                <proptype><codeph>transtype</codeph></proptype>
+                <propvalue><codeph>string</codeph></propvalue>
+                <propdesc>The documents transtype.</propdesc>
+            </property>
+            <property>
+                <proptype><codeph>plugins</codeph></proptype>
+                <propvalue><codeph>string[]</codeph></propvalue>
+                <propdesc>An array of plugin paths. <cmdname>dita-ot-helper</cmdname> will ensure
+                    these plugins are installed (or, if not, try to (re-) install them) before
+                    compilation. This accepts a few different types of plugin specifiers documented
+                    in the table below.</propdesc>
+            </property>
+        </properties>
+        <section id="section_prw_bqh_zlb">
+            <title>Plugin specifications</title>
+        </section>
+        <properties frame="all" id="properties_plugin_specifications">
+            <prophead>
+                <proptypehd>Type</proptypehd>
+                <propvaluehd>Behavior</propvaluehd>
+                <propdeschd>Example</propdeschd>
+            </prophead>
+            <property>
+                <proptype>Plugin Name</proptype>
+                <propvalue> Installs (if non-existent) a plugin by its name from the registry.
+                    Similar to <cmdname>dita install</cmdname></propvalue>
+                <propdesc><varname>org.lwdita</varname></propdesc>
+            </property>
+            <property>
+                <proptype>Plugin <filepath>.zip</filepath> URL</proptype>
+                <propvalue>Installs the plugin from the plugin ZIP file URL (via the internet).
+                    Similar to <cmdname>dita install</cmdname></propvalue>
+                <propdesc><codeph>https://example.com/dita-ot-pdf-plugin.zip</codeph></propdesc>
+            </property>
+            <property>
+                <proptype>Plugin <filepath>.zip</filepath> path</proptype>
+                <propvalue> Installs the plugin from the plugin ZIP file path. Similar to
+                        <codeph>dita install</codeph></propvalue>
+                <propdesc><codeph>./my-plugin.zip</codeph>,
+                        <codeph>/home/example/plugin.zip</codeph></propdesc>
+            </property>
+            <property>
+                <proptype>Plugin directory path</proptype>
+                <propvalue>(Re-) Installs a plugin from its source directory. This is especially
+                    useful if you have a customized PDF plugin inside your documentation repository
+                    as you can simply specify this plugin and let <cmdname>dita-ot-helper</cmdname>
+                    do the work of zipping, installing and using it for you. Similar to zipping the
+                    specified directory and running <cmdname>dita install</cmdname> on the zipped
+                    file.</propvalue>
+                <propdesc><codeph>./plugins/com.example.pdf2</codeph></propdesc>
+            </property>
+        </properties>
+    </refbody>
+</reference>

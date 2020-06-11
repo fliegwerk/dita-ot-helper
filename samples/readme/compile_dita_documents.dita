@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="compile_dita_documents">
+    <title>Compile DITA documents</title>
+    <shortdesc>Compiling DITA documents using the <cmdname>dita-ot-helper</cmdname></shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Create a <filepath>config.json</filepath> for your project.</cmd>
+                <tutorialinfo>The <filepath>config.json</filepath> defines how your document gets
+                        compiled.<note>You can find a few examples for configurations in the
+                        repositories <filepath>samples</filepath> directory. All options of the
+                        config file are documented below in the <xref href="json_config_file.dita"/>
+                        section.</note></tutorialinfo>
+                <stepxmp>In this case, we want to compile a <filepath>document.ditamap</filepath>
+                    file using the <varname>markdown</varname> transtype. Our
+                        <filepath>config.json</filepath> (next to our DITA map file) could therefore
+                    look like
+                    this:<codeblock><data><title><filepath>config.json</filepath></title></data>{
+    "input": "document.ditamap",
+    "plugins": ["org.lwdita"],
+    "transtype": "markdown"
+}</codeblock></stepxmp>
+            </step>
+            <step>
+                <cmd>Compile your document using the <cmdname>dita-ot-helper</cmdname></cmd>
+                <tutorialinfo>In your command line,
+                        run:<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> config.json</userinput></codeblock><note>By
+                        default, the DITA command output is hidden. To enable it, use the
+                            <varname>-v</varname> or <varname>--verbose</varname> argument in your
+                        command:<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> <varname>-v</varname> config.json</userinput></codeblock></note></tutorialinfo>
+                <stepresult>After a short while, the tool outputs <systemoutput>> Compilation
+                        successful.</systemoutput>. The document is now compiled.</stepresult>
+                <steptroubleshooting>If compilation isn't successful, re-run the command using the
+                        <varname>--verbose</varname> option and follow the instructions in the error
+                    message shown there.</steptroubleshooting>
+            </step>
+        </steps>
+        <result>Your document is now compiled and is in the <filepath>out</filepath> folder next to
+            your <filepath>config.json</filepath>.</result>
+    </taskbody>
+</task>

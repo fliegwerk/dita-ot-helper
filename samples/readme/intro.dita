@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="intro">
+    <title>dita-ot-helper</title>
+    <body>
+        <p>A little helper for automating some of the more tedious tasks of automation with the DITA
+            Open Toolkit</p>
+        <note>This README is compiled (using <cmdname>dita-ot-helper</cmdname>) from the DITA
+            sources in the <filepath>/samples/readme</filepath> folder. Direct changes to the
+                <filepath>README.md</filepath> will get overwritten.</note>
+    </body>
+</topic>

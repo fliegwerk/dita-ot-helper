@@ -1,0 +1,7 @@
+{
+  "input": "input.dita",
+  "plugins": [
+    "org.dita.pdf2"
+  ],
+  "transtype": "pdf2"
+}

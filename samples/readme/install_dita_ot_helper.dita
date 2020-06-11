@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="install_dita_ot_helper">
+    <title>Install dita-ot-helper</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Install the <cmdname>dita-ot-helper</cmdname> using npm</cmd>
+                <tutorialinfo>Run<codeblock>$ <userinput>npm install -g dita-ot-helper</userinput></codeblock>in
+                    your command line</tutorialinfo>
+            </step>
+        </steps>
+        <result><cmdname>dita-ot-helper</cmdname> is now installed on your computer.</result>
+    </taskbody>
+</task>
