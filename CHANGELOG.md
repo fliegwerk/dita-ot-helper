@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - documentation comments in the changelog updater script
+- folder `README.md` for `meta-tools`
 ### Changed
 ### Deprecated
 ### Removed
