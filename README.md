@@ -11,6 +11,7 @@ A little helper for automating some of the more tedious tasks of automation with
 At its core, the goal of this project is to create an abstraction layer for the DITA Open Toolkit compilation process that "fixes" a few pain-points. These "fixed" \(to a degree\) aspects are:
 
 -   An easy-to-use project file system allowing easy automation
+-   Installing DITA-OT in autonomous environments \(such as Continuous Integration\)
 -   DITA OT Plugin dependencies \(local and remote\) for specific compilations
 -   Local plugin reinstallation from a development directory. A documentation repository contains a customized PDF plugin in a folder. dita-ot-helper automatically \(re-\) installs this plugin before compiling.
 
@@ -43,7 +44,7 @@ from your command line. It's as easy as that.
 
 -   NodeJS, v10+
 -   on Windows: .NET Framework 4.5+ and Powershell 3 \(preinstalled on WIndows 8+\)
--   dita from the [DITA Open Toolkit](https://www.dita-ot.org/), version 3.5+
+-   **Optional:** dita from the [DITA Open Toolkit](https://www.dita-ot.org/), version 3.5+ \(can also be installed temporarily using the helper!\)
 
 ### Install dita-ot-helper
 
@@ -94,6 +95,12 @@ Compiling DITA documents using the dita-ot-helper
     $ dita-ot-helper -v config.json
     ```
 
+    **Tip:** **Compiling documents without having DITA-OT installed on your system**
+
+    It's possible to compile documents using the helper without having DITA-OT installed. In this case, just add the -i or --install argument to your command. You can also specify a specific version of DITA-OT. This then installs the specified version of DITA-OT in a temporary location \(this gets deleted after the command is run\).
+
+    This is especially useful for autonomous environments such as Continuous Integration as it allows you to compile DITA documents with one command without a lot of setup.
+
     After a short while, the tool outputs \> Compilation successful.. The document is now compiled.
 
     If compilation isn't successful, re-run the command using the --verbose option and follow the instructions in the error message shown there.
@@ -110,6 +117,7 @@ Your document is now compiled and is in the out folder next to your config.json.
 |2|Aborted due to missing dependencies|
 |3|Aborted due to non-existent or non-readable config file|
 |4|Aborted due to invalid config file|
+|5|Something went wrong while installing DITA-OT using the -i flag|
 
 ### JSON Config File
 

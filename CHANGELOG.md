@@ -6,9 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- ability to install a temporary DITA-OT instance using the `-i` flag
 - documentation comments in the changelog updater script
 - folder `README.md` for `meta-tools`
 ### Changed
+- the `processConfigFile` function in `index.js` is now asynchronous
+- install temporary DITA instance using `-i` in `meta-tools/compile-readme.js` if no global DITA-OT installation gets detected
 ### Deprecated
 ### Removed
 ### Fixed

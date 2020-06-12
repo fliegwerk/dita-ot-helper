@@ -9,9 +9,10 @@
                     <li>NodeJS, v10+</li>
                     <li>on Windows: .NET Framework 4.5+ and Powershell 3 (preinstalled on WIndows
                         8+)</li>
-                    <li><cmdname>dita</cmdname> from the <xref href="https://www.dita-ot.org/"
-                            format="html" scope="external">DITA Open Toolkit</xref>, version
-                        3.5+</li>
+                    <li><b>Optional:</b>
+                        <cmdname>dita</cmdname> from the <xref href="https://www.dita-ot.org/"
+                            format="html" scope="external">DITA Open Toolkit</xref>, version 3.5+
+                        (can also be installed temporarily using the helper!)</li>
                 </ul>
             </p>
         </section>

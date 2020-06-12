@@ -28,7 +28,17 @@
                         run:<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> config.json</userinput></codeblock><note>By
                         default, the DITA command output is hidden. To enable it, use the
                             <varname>-v</varname> or <varname>--verbose</varname> argument in your
-                        command:<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> <varname>-v</varname> config.json</userinput></codeblock></note></tutorialinfo>
+                        command:<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> <varname>-v</varname> config.json</userinput></codeblock></note><note
+                        type="tip"><b>Compiling documents without having DITA-OT installed on your
+                            system</b><p>It's possible to compile documents using the helper without
+                            having DITA-OT installed. In this case, just add the
+                                <varname>-i</varname> or <varname>--install</varname> argument to
+                            your command. You can also specify a specific version of DITA-OT. This
+                            then installs the specified version of <keyword>DITA-OT</keyword> in a
+                            temporary location (this gets deleted after the command is
+                            run).</p><p>This is especially useful for autonomous environments such
+                            as Continuous Integration as it allows you to compile DITA documents
+                            with one command without a lot of setup.</p></note></tutorialinfo>
                 <stepresult>After a short while, the tool outputs <systemoutput>> Compilation
                         successful.</systemoutput>. The document is now compiled.</stepresult>
                 <steptroubleshooting>If compilation isn't successful, re-run the command using the

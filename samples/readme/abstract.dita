@@ -8,6 +8,7 @@
             aspects are:</p>
         <ul id="ul_zqc_cdh_zlb">
             <li>An easy-to-use project file system allowing easy automation</li>
+            <li>Installing DITA-OT in autonomous environments (such as Continuous Integration)</li>
             <li>DITA OT Plugin dependencies (local and remote) for specific compilations</li>
             <li>Local plugin reinstallation from a development directory. A documentation repository
                 contains a customized PDF plugin in a folder. <cmdname>dita-ot-helper</cmdname>
