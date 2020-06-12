@@ -18,11 +18,16 @@ const readMeDestPath = path.join(__dirname, '..', 'README.md');
 
 console.log('Compiling README.md from samples/readme...');
 
-shell.exec(`node ${scriptPath} ${readmeSrcConfigJSONPath}`, {
-    fatal: true,
-    silent: false,
-    cwd: readmeSrcFolder,
-});
+shell.exec(
+    `node ${scriptPath} ${readmeSrcConfigJSONPath} ${
+        shell.which('dita') ? '' : '-i'
+    }`,
+    {
+        fatal: true,
+        silent: false,
+        cwd: readmeSrcFolder,
+    }
+);
 
 console.log('Copying compiled README to repository root folder...');
 

@@ -60,8 +60,6 @@ async function processConfigFile(configFilePath) {
         );
     }
 
-    console.log(ditaInstallation);
-
     console.info('> Reading config file');
     const config = readConfig(configFilePath);
     console.info('> Processing config file');
