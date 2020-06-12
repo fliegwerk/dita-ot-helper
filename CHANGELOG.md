@@ -1,15 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 ### Added
 ### Changed
-- add empty line at end of changelog in CHANGELOG update script
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
+## [0.9.7] - 2020-06-12
+### Changed
+- add empty line at end of changelog in CHANGELOG update script
 ## [0.9.6] - 2020-06-12
 ### Fixed
 - Removed debug statements from changelog update script
@@ -46,10 +47,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## v0.9.0 - 2020-06-11
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.6...HEAD
+[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.7...HEAD
 [0.9.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.0...v0.9.1
 [0.9.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.1...v0.9.2
 [0.9.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.2...v0.9.3
 [0.9.4]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.3...v0.9.4
 [0.9.5]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.4...v0.9.5
 [0.9.6]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.5...v0.9.6
+[0.9.7]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.6...v0.9.7
