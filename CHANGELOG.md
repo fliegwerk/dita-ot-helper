@@ -6,16 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.10.0] - 2020-06-12
+### Added
 - ability to install a temporary DITA-OT instance using the `-i` flag
 - documentation comments in the changelog updater script
 - folder `README.md` for `meta-tools`
 ### Changed
 - the `processConfigFile` function in `index.js` is now asynchronous
 - install temporary DITA instance using `-i` in `meta-tools/compile-readme.js` if no global DITA-OT installation gets detected
-### Deprecated
-### Removed
-### Fixed
-### Security
 ## [0.9.8] - 2020-06-12
 ### Fixed
 - fixed bug where lines at the beginning of the changelog get cut off.
@@ -58,7 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## v0.9.0 - 2020-06-11
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.8...HEAD
+[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.0...HEAD
 [0.9.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.0...v0.9.1
 [0.9.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.1...v0.9.2
 [0.9.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.2...v0.9.3
@@ -67,3 +70,4 @@ Initial prerelease.
 [0.9.6]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.5...v0.9.6
 [0.9.7]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.6...v0.9.7
 [0.9.8]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.7...v0.9.8
+[0.10.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.8...v0.10.0
