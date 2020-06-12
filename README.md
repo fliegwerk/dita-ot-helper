@@ -1,5 +1,7 @@
 # dita-ot-helper
 
+[![CI](https://github.com/fliegwerk/dita-ot-helper/workflows/CI/badge.svg)](https://github.com/fliegwerk/dita-ot-helper/actions?query=workflow%3ACI) [![DeepScan Grade](https://deepscan.io/api/teams/9705/projects/12290/branches/188095/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=9705&pid=12290&bid=188095) [![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/fliegwerk/dita-ot-helper)](https://github.com/fliegwerk/dita-ot-helper/security) [![NPM package version](https://img.shields.io/npm/v/dita-ot-helper)](https://www.npmjs.com/package/dita-ot-helper) ![Minzipped npm package size](https://img.shields.io/bundlephobia/minzip/dita-ot-helper)
+
 A little helper for automating some of the more tedious tasks of automation with the DITA Open Toolkit
 
 **Note:** This README is compiled \(using dita-ot-helper\) from the DITA sources in the /samples/readme folder. Direct changes to the README.md will get overwritten.

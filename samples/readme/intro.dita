@@ -3,6 +3,29 @@
 <topic id="intro">
     <title>dita-ot-helper</title>
     <body>
+        <p><xref href="https://github.com/fliegwerk/dita-ot-helper/actions?query=workflow%3ACI"
+                format="html" scope="external"><image alt="CI"
+                    href="https://github.com/fliegwerk/dita-ot-helper/workflows/CI/badge.svg"
+                    scope="external" id="image_badge_ci"/>
+            </xref>
+            <xref
+                href="https://deepscan.io/dashboard#view=project&amp;tid=9705&amp;pid=12290&amp;bid=188095"
+                format="html" scope="external"><image alt="DeepScan Grade"
+                    href="https://deepscan.io/api/teams/9705/projects/12290/branches/188095/badge/grade.svg"
+                    scope="external" id="image_badge_deepscan"/>
+            </xref>
+            <xref href="https://github.com/fliegwerk/dita-ot-helper/security" format="html"
+                scope="external"><image alt="vulnerabilities" scope="external"
+                    href="https://img.shields.io/snyk/vulnerabilities/github/fliegwerk/dita-ot-helper"
+                    id="image_badge_vulnerabilities"/>
+            </xref>
+            <xref href="https://www.npmjs.com/package/dita-ot-helper" format="html" scope="external">
+                <image alt="NPM package version" href="https://img.shields.io/npm/v/dita-ot-helper"
+                    scope="external" id="image_badge_npm_version"/>
+            </xref>
+            <image alt="Minzipped npm package size"
+                href="https://img.shields.io/bundlephobia/minzip/dita-ot-helper" scope="external"
+                id="image_badge_package_size"/></p>
         <p>A little helper for automating some of the more tedious tasks of automation with the DITA
             Open Toolkit</p>
         <note>This README is compiled (using <cmdname>dita-ot-helper</cmdname>) from the DITA
