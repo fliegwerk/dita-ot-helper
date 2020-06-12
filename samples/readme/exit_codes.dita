@@ -28,6 +28,11 @@
                 <proptype>4</proptype>
                 <propvalue>Aborted due to invalid config file</propvalue>
             </property>
+            <property>
+                <proptype>5</proptype>
+                <propvalue>Something went wrong while installing <keyword>DITA-OT</keyword> using
+                    the <varname>-i</varname> flag</propvalue>
+            </property>
         </properties>
     </refbody>
 </reference>
