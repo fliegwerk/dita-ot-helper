@@ -9,7 +9,6 @@ function installDITAPlugin(ditaExecPath, pluginPath, silent) {
     const pluginName = path.basename(pluginPath);
     try {
         if (!fs.existsSync(pluginPath)) {
-            console.log(`${ditaExecPath} install ${pluginName}`);
             shell.exec(`${ditaExecPath} install ${pluginName}`, { silent });
         } else if (fs.statSync(pluginPath).isFile()) {
             // ZIP file
