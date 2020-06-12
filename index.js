@@ -2,8 +2,10 @@
 /*
  * Copyright (c) 2020 by Pablo Klaschka
  */
+let defaultDitaOTVersion = '3.5.1';
 
 const { program } = require('commander');
+const ch = require('chalk');
 const checkDependencies = require('./helpers/dependency-check');
 const readConfig = require('./helpers/read-config');
 const processDita = require('./helpers/process-dita');
@@ -29,9 +31,8 @@ program.option(
 );
 
 program.option(
-    '-i --install',
-    'Download and use a temporary instance of DITA OT (e.g., for CI environments)',
-    undefined
+    '-i --install <dita-ot-version>',
+    'Download and use a temporary instance of DITA OT (e.g., for CI environments)'
 );
 
 program.parse(process.argv);
@@ -53,10 +54,23 @@ async function processConfigFile(configFilePath) {
     };
 
     if (program['install'] !== undefined) {
+        const isSpecifiedDitaOTVersionValid =
+            typeof program['install'] === 'string' &&
+            /^\d+\.\d+(\.\d+)?$/.test(program['install']);
+
+        if (!isSpecifiedDitaOTVersionValid) {
+            console.warn(
+                ch.yellow(
+                    'Invalid DITA version specified. Using version ' +
+                        defaultDitaOTVersion
+                )
+            );
+        }
+
         ditaInstallation = await installTempDita(
-            typeof program['install'] === 'string'
+            isSpecifiedDitaOTVersionValid
                 ? program['install']
-                : '3.5.1'
+                : defaultDitaOTVersion
         );
     }
 
@@ -69,6 +83,7 @@ async function processConfigFile(configFilePath) {
         config,
         !program['verbose']
     );
-    console.info('> Compilation complete.');
-    console.log(await ditaInstallation.clean());
+    console.info('> Compilation complete. Cleaning up...');
+    await ditaInstallation.clean();
+    console.info('> Complete');
 }
