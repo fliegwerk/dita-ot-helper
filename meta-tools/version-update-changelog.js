@@ -103,7 +103,7 @@ try {
         );
 
         const newChangelog = [
-            ...changelogLines.slice(0, unreleasedHeadingIndex - 1),
+            ...changelogLines.slice(0, unreleasedHeadingIndex),
             ...template,
             `## [${newVersion}] - ${new Date().toISOString().split('T')[0]}`,
             ...curatedChangelogLines,
