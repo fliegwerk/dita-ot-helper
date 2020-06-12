@@ -115,6 +115,7 @@ try {
                 `v${previousVersionNumber}`,
                 tag
             )}`,
+            '',
         ].join('\r\n');
 
         fs.writeFileSync(changelogPath, newChangelog, {
