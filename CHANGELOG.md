@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- `sample-2`: A sample where all one has to do to compile is run `npm install` and `npm start`
 ### Changed
 ### Deprecated
 ### Removed
