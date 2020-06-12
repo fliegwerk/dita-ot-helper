@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
+- Removed debug statements from changelog update script
+- Use CRLF in changelog update script
+- CHANGELOG date of v0.9.4
+- Update of the `[Unreleased]` link in the CHANGELOG by the update script
 ### Security
 ## [0.9.5] - 2020-06-12
 ### Added
@@ -16,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changelog version release script
 ### Changed
 - Formatting requirements
-## [0.9.4] - 2020-06-11
+## [0.9.4] - 2020-06-12
 ### Added
 - Issue templates
 - Code of Conduct

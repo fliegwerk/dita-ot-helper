@@ -17,8 +17,10 @@ const shell = require('shelljs');
 
 console.log(ch.italic('Updating changelog...'));
 
+const repoUrl = 'https://github.com/fliegwerk/dita-ot-helper';
+
 const getComparisonUrl = (prevTag, currTag) =>
-    `https://github.com/fliegwerk/dita-ot-helper/compare/${prevTag}...${currTag}`;
+    `${repoUrl}/compare/${prevTag}...${currTag}`;
 
 const changelogPath = path.join(__dirname, '..', 'CHANGELOG.md');
 
@@ -75,6 +77,15 @@ try {
         );
         process.exit(4);
     } else {
+        const unreleasedLinkIndex = changelogLines.findIndex((line) =>
+            line.startsWith('[Unreleased]:')
+        );
+
+        changelogLines[unreleasedLinkIndex] = `[Unreleased]: ${getComparisonUrl(
+            `v${newVersion}`,
+            'HEAD'
+        )}`;
+
         const currentChangelogLines = changelogLines.slice(
             unreleasedHeadingIndex + 1,
             previousVersionIndex - 1
@@ -87,7 +98,6 @@ try {
                 const isEmpty =
                     currentChangelogLines.length <= i + 1 ||
                     currentChangelogLines[i + 1].startsWith('###');
-                console.log(isCategory, isEmpty);
                 return !(isCategory && isEmpty);
             }
         );
@@ -105,7 +115,7 @@ try {
                 `v${previousVersionNumber}`,
                 tag
             )}`,
-        ].join('\n');
+        ].join('\r\n');
 
         fs.writeFileSync(changelogPath, newChangelog, {
             encoding: 'utf-8',
