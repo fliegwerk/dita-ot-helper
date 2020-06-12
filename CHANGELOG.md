@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- added ability to install a temporary DITA-OT instance using the `-i` flag
 - documentation comments in the changelog updater script
 - folder `README.md` for `meta-tools`
 ### Changed
