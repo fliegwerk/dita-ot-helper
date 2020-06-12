@@ -13,6 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 const ch = require('chalk');
+const shell = require('shelljs');
 
 console.log(ch.italic('Updating changelog...'));
 
@@ -65,7 +66,14 @@ try {
                 'Unchanged version number. Run this script after the package version number was updated.'
             )
         );
-        process.exit(1);
+        process.exit(3);
+    } else if (!shell.which('git')) {
+        console.error(
+            ch.red(
+                'git is required for this script to work but was not found in PATH.'
+            )
+        );
+        process.exit(4);
     } else {
         const currentChangelogLines = changelogLines.slice(
             unreleasedHeadingIndex + 1,
@@ -105,9 +113,15 @@ try {
 
         console.log(ch.bold('Release Notes:'));
         console.log(curatedChangelogLines.join('\n'));
+
+        shell.exec('git add .', {
+            cwd: path.dirname(changelogPath),
+            fatal: true,
+        });
+
         console.log(ch.italic('Changelog update complete...'));
     }
 } catch (e) {
-    console.error(ch.red('An unknown error has occured. Details:'), e.message);
+    console.error(ch.red('An unknown error has occurred. Details:'), e.message);
     process.exit(1);
 }
