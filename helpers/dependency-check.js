@@ -1,4 +1,4 @@
-const shell = require('shelljs')
+const shell = require('shelljs');
 
 /**
  * Checks system dependencies and lists missing dependencies.
@@ -8,10 +8,10 @@ const shell = require('shelljs')
  * @param {string[]} dependencies List of dependencies. I.e., commands that have to be executable in the path.
  */
 module.exports = function checkDependencies(dependencies) {
-    const missingDependencies = []
+    const missingDependencies = [];
 
     for (const dependency of dependencies) {
-        if (!shell.which(dependency)) missingDependencies.push(dependency)
+        if (!shell.which(dependency)) missingDependencies.push(dependency);
     }
 
     if (missingDependencies.length) {
@@ -21,7 +21,7 @@ module.exports = function checkDependencies(dependencies) {
             missingDependencies
                 .map((dependency) => `- ${dependency}`)
                 .join('\n')
-        )
-        shell.exit(2)
+        );
+        shell.exit(2);
     }
-}
+};
