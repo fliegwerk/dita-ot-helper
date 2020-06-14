@@ -29,21 +29,37 @@
                 <propdeschd>Description</propdeschd>
             </prophead>
             <property>
-                <proptype><codeph>input</codeph></proptype>
+                <proptype><codeph><apiname>input</apiname></codeph></proptype>
                 <propvalue><codeph>string</codeph></propvalue>
                 <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path to
                     your input file. Gets passed to the <codeph>-i</codeph> argument of the
                         <cmdname>dita</cmdname> command.</propdesc>
             </property>
             <property>
-                <proptype><codeph>output</codeph></proptype>
+                <proptype><codeph><apiname>output</apiname></codeph></proptype>
                 <propvalue><codeph>string</codeph></propvalue>
                 <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path of the
                     output directory of the compiled file. Gets passed to the <codeph>-o</codeph>
                     argument of the <cmdname>dita</cmdname> command.</propdesc>
             </property>
             <property>
-                <proptype><codeph>plugins</codeph></proptype>
+                <proptype><codeph><apiname>propertyfile</apiname></codeph></proptype>
+                <propvalue><codeph>string</codeph></propvalue>
+                <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path of a
+                        <filepath>.properties</filepath> file. Gets passed to the
+                        <codeph>--propertyfile</codeph> argument of the <cmdname>dita</cmdname>
+                    command.</propdesc>
+            </property>
+            <property>
+                <proptype><codeph><apiname>resource</apiname></codeph></proptype>
+                <propvalue><codeph>string</codeph></propvalue>
+                <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path to a
+                    resource file, e.g., a map containing key definitions. Gets passed to the
+                        <codeph>-r</codeph> argument of the <cmdname>dita</cmdname>
+                    command.</propdesc>
+            </property>
+            <property>
+                <proptype><codeph><apiname>plugins</apiname></codeph></proptype>
                 <propvalue><codeph>string[]</codeph></propvalue>
                 <propdesc>An array of plugin paths. <cmdname>dita-ot-helper</cmdname> will ensure
                     these plugins are installed (or, if not, try to (re-) install them) before
@@ -51,7 +67,7 @@
                     in the table below.</propdesc>
             </property>
             <property>
-                <proptype><codeph>transtype</codeph></proptype>
+                <proptype><codeph><apiname>transtype</apiname></codeph></proptype>
                 <propvalue><codeph>string</codeph></propvalue>
                 <propdesc>The documents transtype. Gets passed to the <codeph>-f</codeph> argument
                     of the <cmdname>dita</cmdname> command.</propdesc>
@@ -97,4 +113,8 @@
             </property>
         </properties>
     </refbody>
+    <related-links>
+        <link href="https://www.dita-ot.org/dev/topics/build-using-dita-command.html" format="html"
+            scope="external"/>
+    </related-links>
 </reference>

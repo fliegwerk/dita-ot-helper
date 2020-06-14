@@ -52,6 +52,10 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
         '-i',
         path.join(configDir, config['input']), // -i argument
         ...(config['output'] ? ['-o', config['output']] : []), // -o argument
+        ...(config['propertyfile']
+            ? ['--porpertyfile=', config['propertyfile']]
+            : []), // --propertyfile argument
+        ...(config['resource'] ? ['-r', config['resource']] : []), // -r argument
     ]);
 
     shell.exec(cmd, {

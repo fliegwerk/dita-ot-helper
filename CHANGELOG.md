@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- support for specifying a `.properties` file (*`dita --propertyfile=[...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
+- support for specifying a resource file (*`dita -r [...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
 ### Changed
 ### Deprecated
 ### Removed
