@@ -10,8 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
-- Issues in the [README.md](README.md)
 ### Security
+## [0.11.1] - 2020-06-14
+### Fixed
+- Issues in the [README.md](README.md)
 ## [0.11.0] - 2020-06-14
 ### Added
 - Support for glob patterns to compile multiple JSON config files at once
@@ -88,7 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## v0.9.0 - 2020-06-11
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.0...HEAD
+[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.1...HEAD
 [0.9.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.0...v0.9.1
 [0.9.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.1...v0.9.2
 [0.9.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.2...v0.9.3
@@ -104,3 +106,4 @@ Initial prerelease.
 [0.10.4]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.3...v0.10.4
 [0.10.5]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.4...v0.10.5
 [0.11.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.5...v0.11.0
+[0.11.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.0...v0.11.1
