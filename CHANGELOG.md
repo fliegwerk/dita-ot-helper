@@ -10,8 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
-- path resolving for `propertyfile`, `resource`, and `output` config fields
 ### Security
+## [0.10.4] - 2020-06-14
+### Fixed
+- path resolving for `propertyfile`, `resource`, and `output` config fields
 ## [0.10.3] - 2020-06-14
 ### Added
 - support for specifying a `.properties` file (*`dita --propertyfile=[...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
@@ -76,7 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## v0.9.0 - 2020-06-11
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.3...HEAD
+[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.4...HEAD
 [0.9.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.0...v0.9.1
 [0.9.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.1...v0.9.2
 [0.9.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.2...v0.9.3
@@ -89,3 +91,4 @@ Initial prerelease.
 [0.10.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.0...v0.10.1
 [0.10.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.1...v0.10.2
 [0.10.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.2...v0.10.3
+[0.10.4]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.3...v0.10.4
