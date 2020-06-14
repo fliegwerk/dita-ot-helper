@@ -51,7 +51,7 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
         config['transtype'], // -f argument
         '-i',
         path.resolve(configDir, config['input']), // -i argument
-        ...(config['output'] ? ['-o', path.resolve(config['output'])] : []), // -o argument
+        ...(config['output'] ? ['-o', path.resolve(configDir, config['output'])] : []), // -o argument
         ...(config['propertyfile']
             ? [
                   '--porpertyfile=',
