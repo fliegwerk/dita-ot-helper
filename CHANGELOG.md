@@ -6,13 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- support for specifying a `.properties` file (*`dita --propertyfile=[...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
-- support for specifying a resource file (*`dita -r [...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
 ### Changed
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
+## [0.10.3] - 2020-06-14
+### Added
+- support for specifying a `.properties` file (*`dita --propertyfile=[...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
+- support for specifying a resource file (*`dita -r [...]`*, cf. https://www.dita-ot.org/dev/parameters/dita-command-arguments.html) in the JSON configuration file
 ## [0.10.2] - 2020-06-14
 ### Added
 - support for specifying an output directory in the compilation config file
@@ -73,7 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## v0.9.0 - 2020-06-11
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.2...HEAD
+[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.3...HEAD
 [0.9.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.0...v0.9.1
 [0.9.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.1...v0.9.2
 [0.9.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.2...v0.9.3
@@ -85,3 +87,4 @@ Initial prerelease.
 [0.10.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.8...v0.10.0
 [0.10.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.0...v0.10.1
 [0.10.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.1...v0.10.2
+[0.10.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.2...v0.10.3

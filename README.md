@@ -141,6 +141,8 @@ Below, you can find all the options you can put into your configuration file.
 |----------|----|-----------|
 |`input`|`string`|Relative \(to the config.json\) or absolute path to your input file. Gets passed to the `-i` argument of the dita command.|
 |`output`|`string`|Relative \(to the config.json\) or absolute path of the output directory of the compiled file. Gets passed to the `-o` argument of the dita command.|
+|`propertyfile`|`string`|Relative \(to the config.json\) or absolute path of a .properties file. Gets passed to the `--propertyfile` argument of the dita command.|
+|`resource`|`string`|Relative \(to the config.json\) or absolute path to a resource file, e.g., a map containing key definitions. Gets passed to the `-r` argument of the dita command.|
 |`plugins`|`string[]`|An array of plugin paths. dita-ot-helper will ensure these plugins are installed \(or, if not, try to \(re-\) install them\) before compilation. This accepts a few different types of plugin specifiers documented in the table below.|
 |`transtype`|`string`|The documents transtype. Gets passed to the `-f` argument of the dita command.|
 
@@ -152,4 +154,9 @@ Below, you can find all the options you can put into your configuration file.
 |Plugin .zip URL|Installs the plugin from the plugin ZIP file URL \(via the internet\). Similar to dita install|`https://example.com/dita-ot-pdf-plugin.zip`|
 |Plugin .zip path|Installs the plugin from the plugin ZIP file path. Similar to `dita install`|`./my-plugin.zip`, `/home/example/plugin.zip`|
 |Plugin directory path|\(Re-\) Installs a plugin from its source directory. This is especially useful if you have a customized PDF plugin inside your documentation repository as you can simply specify this plugin and let dita-ot-helper do the work of zipping, installing and using it for you. Similar to zipping the specified directory and running dita install on the zipped file.|`./plugins/com.example.pdf2`|
+
+**Related information**  
+
+
+[https://www.dita-ot.org/dev/topics/build-using-dita-command.html](https://www.dita-ot.org/dev/topics/build-using-dita-command.html)
 
