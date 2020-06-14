@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
+- path resolving for `propertyfile`, `resource`, and `output` config fields
 ### Security
 ## [0.10.3] - 2020-06-14
 ### Added

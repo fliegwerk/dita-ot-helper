@@ -50,12 +50,17 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
         '-f',
         config['transtype'], // -f argument
         '-i',
-        path.join(configDir, config['input']), // -i argument
-        ...(config['output'] ? ['-o', config['output']] : []), // -o argument
+        path.resolve(configDir, config['input']), // -i argument
+        ...(config['output'] ? ['-o', path.resolve(config['output'])] : []), // -o argument
         ...(config['propertyfile']
-            ? ['--porpertyfile=', config['propertyfile']]
+            ? [
+                  '--porpertyfile=',
+                  path.resolve(configDir, config['propertyfile']),
+              ]
             : []), // --propertyfile argument
-        ...(config['resource'] ? ['-r', config['resource']] : []), // -r argument
+        ...(config['resource']
+            ? ['-r', path.resolve(configDir, config['resource'])]
+            : []), // -r argument
     ]);
 
     shell.exec(cmd, {
