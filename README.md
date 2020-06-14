@@ -108,6 +108,46 @@ Compiling DITA documents using the dita-ot-helper
 
 Your document is now compiled and is in the out folder next to your config.json.
 
+### Compile multiple documents
+
+Compile multiple documents with one command using glob patterns
+
+The CLI makes use of the node [glob](https://www.npmjs.com/package/glob) library. For possible glob patterns and other information, please refer to their documentation. Basic knowledge of glob patterns is required to fully understand this task.
+
+When you have multiple configurations, e.g., for multiple maps and/or multiple deliverables per map, it is possible to compile all of them using just one command.
+
+To provide an example, we'll assume you have the following directory structure \(samples/sample-3 provides a similar example\):
+
+```
+./ \(current working directory\)
+    end-user-manual-pdf.json (input => ./end-user-manual.ditamap) 
+    end-user-manual-html.json (input => ./end-user-manual.ditamap)
+    end-user-manual.ditamap (A DITA map)
+    [...] (DITA documents)
+```
+
+**Tip:** To avoid confusion, we suggest to specify individual output directories in your configuration files for each configuration. This way, each configuration will have exactly one corresponding output directory.
+
+1.  Run the dita-ot-helper command using a glob pattern to match your configuration files
+
+    The same patterns as with [Compile DITA documents](#compile_dita_documents) apply here. The only difference is using a glob pattern instead of the file name of a config file.
+
+    In our example from above, we need to run
+
+    ```
+    $ dita-ot-helper end-user-manual-\*.json
+    ```
+
+    dita-ot-helper will process \(i.e., compile\) all the JSON files matching the patterns.
+
+
+All configurations are compiled.
+
+**Related information**  
+
+
+[https://www.npmjs.com/package/glob](https://www.npmjs.com/package/glob)
+
 ### Exit codes
 
 |Exit Code|Description|
