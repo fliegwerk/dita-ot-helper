@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="compile_multiple_documents">
+    <title>Compile multiple documents</title>
+    <shortdesc>Compile multiple documents with one command using <cmdname>glob</cmdname>
+        patterns</shortdesc>
+    <taskbody>
+        <prereq id="prereq_wtq_ytd_1mb">The CLI makes use of the node <xref
+                href="https://www.npmjs.com/package/glob" format="html" scope="external">glob</xref>
+            library. For possible glob patterns and other information, please refer to their
+            documentation. Basic knowledge of glob patterns is required to fully understand this
+            task.</prereq>
+        <context>
+            <p>When you have multiple configurations, e.g., for multiple maps and/or multiple
+                deliverables per map, it is possible to compile all of them using just one
+                command.</p>
+            <p>To provide an example, we'll assume you have the following directory structure
+                    (<filepath>samples/sample-3</filepath> provides a similar
+                example):<codeblock><filepath>./ (current working directory)</filepath>
+    end-user-manual-pdf.json (<apiname>input</apiname> => <filepath>./end-user-manual.ditamap</filepath>) 
+    end-user-manual-html.json (<apiname>input</apiname> => <filepath>./end-user-manual.ditamap</filepath>)
+    end-user-manual.ditamap (A DITA map)
+    [...] (DITA documents)</codeblock></p>
+            <note type="tip">To avoid confusion, we suggest to specify individual
+                    <apiname>output</apiname> directories in your configuration files for each
+                configuration. This way, each configuration will have exactly one corresponding
+                output directory.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Run the <cmdname>dita-ot-helper</cmdname> command using a glob pattern to match
+                    your configuration files</cmd>
+                <tutorialinfo>The same patterns as with <xref href="compile_dita_documents.dita"/>
+                    apply here. The only difference is using a glob pattern instead of the file name
+                    of a config file.</tutorialinfo>
+                <stepxmp>In our example from above, we need to
+                    run<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> end-user-manual-*.json</userinput></codeblock></stepxmp>
+                <stepresult><cmdname>dita-ot-helper</cmdname> will process (i.e., compile) all the
+                    JSON files matching the patterns.</stepresult>
+            </step>
+        </steps>
+        <result id="result_g45_mvd_1mb">All configurations are compiled.</result>
+    </taskbody>
+    <related-links>
+        <link href="https://www.npmjs.com/package/glob" format="html" scope="external"/>
+    </related-links>
+</task>

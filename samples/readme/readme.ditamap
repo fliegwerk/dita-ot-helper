@@ -8,6 +8,7 @@
             <topicref href="dependencies.dita"/>
             <topicref href="install_dita_ot_helper.dita"/>
             <topicref href="compile_dita_documents.dita"/>
+            <topicref href="compile_multiple_documents.dita"/>
             <topicref href="exit_codes.dita"/>
             <topicref href="json_config_file.dita"/>
         </topicref>
