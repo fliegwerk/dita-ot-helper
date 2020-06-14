@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Support for glob patterns to compile multiple JSON config files at once
+- `samples/sample-3` to demonstrate glob support
 ### Changed
+- enhanced CLI output
 ### Deprecated
 ### Removed
 ### Fixed
