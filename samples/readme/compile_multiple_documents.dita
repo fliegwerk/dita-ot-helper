@@ -16,7 +16,7 @@
                 command.</p>
             <p>To provide an example, we'll assume you have the following directory structure
                     (<filepath>samples/sample-3</filepath> provides a similar
-                example):<codeblock><filepath>./ (current working directory)</filepath>
+                example):<codeblock><filepath>./</filepath> (current working directory)
     end-user-manual-pdf.json (<apiname>input</apiname> => <filepath>./end-user-manual.ditamap</filepath>) 
     end-user-manual-html.json (<apiname>input</apiname> => <filepath>./end-user-manual.ditamap</filepath>)
     end-user-manual.ditamap (A DITA map)
@@ -34,7 +34,7 @@
                     apply here. The only difference is using a glob pattern instead of the file name
                     of a config file.</tutorialinfo>
                 <stepxmp>In our example from above, we need to
-                    run<codeblock>$ <userinput><cmdname>dita-ot-helper</cmdname> end-user-manual-*.json</userinput></codeblock></stepxmp>
+                    run<codeblock>$ <cmdname>dita-ot-helper</cmdname> end-user-manual-*.json</codeblock></stepxmp>
                 <stepresult><cmdname>dita-ot-helper</cmdname> will process (i.e., compile) all the
                     JSON files matching the patterns.</stepresult>
             </step>

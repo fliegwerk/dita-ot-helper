@@ -119,7 +119,7 @@ When you have multiple configurations, e.g., for multiple maps and/or multiple d
 To provide an example, we'll assume you have the following directory structure \(samples/sample-3 provides a similar example\):
 
 ```
-./ \(current working directory\)
+./ (current working directory)
     end-user-manual-pdf.json (input => ./end-user-manual.ditamap) 
     end-user-manual-html.json (input => ./end-user-manual.ditamap)
     end-user-manual.ditamap (A DITA map)
@@ -135,7 +135,7 @@ To provide an example, we'll assume you have the following directory structure \
     In our example from above, we need to run
 
     ```
-    $ dita-ot-helper end-user-manual-\*.json
+    $ dita-ot-helper end-user-manual-*.json
     ```
 
     dita-ot-helper will process \(i.e., compile\) all the JSON files matching the patterns.
