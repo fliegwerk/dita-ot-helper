@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed
 ### Fixed
+- path resolving for `output` config field
 ### Security
 ## [0.10.4] - 2020-06-14
 ### Fixed
