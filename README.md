@@ -139,9 +139,10 @@ Below, you can find all the options you can put into your configuration file.
 
 |JSON field|Type|Description|
 |----------|----|-----------|
-|`input`|`string`|Relative \(to the config.json\) or absolute path to your input file.|
-|`transtype`|`string`|The documents transtype.|
+|`input`|`string`|Relative \(to the config.json\) or absolute path to your input file. Gets passed to the `-i` argument of the dita command.|
+|`output`|`string`|Relative \(to the config.json\) or absolute path of the output directory of the compiled file. Gets passed to the `-o` argument of the dita command.|
 |`plugins`|`string[]`|An array of plugin paths. dita-ot-helper will ensure these plugins are installed \(or, if not, try to \(re-\) install them\) before compilation. This accepts a few different types of plugin specifiers documented in the table below.|
+|`transtype`|`string`|The documents transtype. Gets passed to the `-f` argument of the dita command.|
 
 #### Plugin specifications
 

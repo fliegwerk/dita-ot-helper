@@ -6,13 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- support for specifying an output directory in the compilation config file
 ### Changed
-- specified `dita` command argument mappings of config file properties
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
+## [0.10.2] - 2020-06-14
+### Added
+- support for specifying an output directory in the compilation config file
+### Changed
+- specified `dita` command argument mappings of config file properties
 ## [0.10.1] - 2020-06-12
 ### Added
 - `sample-2`: A sample where all one has to do to compile is run `npm install` and `npm start`
@@ -68,7 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## v0.9.0 - 2020-06-11
 Initial prerelease.
 
-[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.1...HEAD
+[Unreleased]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.2...HEAD
 [0.9.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.0...v0.9.1
 [0.9.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.1...v0.9.2
 [0.9.3]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.2...v0.9.3
@@ -79,3 +82,4 @@ Initial prerelease.
 [0.9.8]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.7...v0.9.8
 [0.10.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.9.8...v0.10.0
 [0.10.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.0...v0.10.1
+[0.10.2]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.1...v0.10.2
