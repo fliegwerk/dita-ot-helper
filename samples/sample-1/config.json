@@ -3,5 +3,6 @@
   "plugins": [
     "org.dita.pdf2"
   ],
-  "transtype": "pdf2"
+  "transtype": "pdf2",
+  "output": "custom-output-dir"
 }

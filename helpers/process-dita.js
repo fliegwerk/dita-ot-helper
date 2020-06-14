@@ -2,6 +2,7 @@ const shell = require('shelljs');
 const fs = require('fs');
 const path = require('path');
 const { zipSync } = require('cross-zip');
+const { quote } = require('shell-quote');
 
 function installDITAPlugin(ditaExecPath, pluginPath, silent) {
     console.log(`> Installing plugin ${pluginPath}`);
@@ -44,15 +45,18 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
             );
     }
 
-    shell.exec(
-        `${ditaExecPath} -f ${config.transtype} -i ${path.join(
-            configDir,
-            config.input
-        )}`,
-        {
-            silent,
-            fatal: true,
-            cwd: configDir,
-        }
-    );
+    const cmd = quote([
+        ditaExecPath,
+        '-f',
+        config['transtype'], // -f argument
+        '-i',
+        path.join(configDir, config['input']), // -i argument
+        ...(config['output'] ? ['-o', config['output']] : []), // -o argument
+    ]);
+
+    shell.exec(cmd, {
+        silent,
+        fatal: true,
+        cwd: configDir,
+    });
 };

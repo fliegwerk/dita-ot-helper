@@ -2,4 +2,5 @@
 .vscode
 node_modules
 /samples/*/out/
+/samples/*/custom-output-dir/
 /samples/**.xpr

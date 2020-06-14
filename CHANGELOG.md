@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- support for specifying an output directory in the compilation config file
 ### Changed
+- specified `dita` command argument mappings of config file properties
 ### Deprecated
 ### Removed
 ### Fixed

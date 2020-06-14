@@ -32,12 +32,15 @@
                 <proptype><codeph>input</codeph></proptype>
                 <propvalue><codeph>string</codeph></propvalue>
                 <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path to
-                    your input file.</propdesc>
+                    your input file. Gets passed to the <codeph>-i</codeph> argument of the
+                        <cmdname>dita</cmdname> command.</propdesc>
             </property>
             <property>
-                <proptype><codeph>transtype</codeph></proptype>
+                <proptype><codeph>output</codeph></proptype>
                 <propvalue><codeph>string</codeph></propvalue>
-                <propdesc>The documents transtype.</propdesc>
+                <propdesc>Relative (to the <filepath>config.json</filepath>) or absolute path of the
+                    output directory of the compiled file. Gets passed to the <codeph>-o</codeph>
+                    argument of the <cmdname>dita</cmdname> command.</propdesc>
             </property>
             <property>
                 <proptype><codeph>plugins</codeph></proptype>
@@ -46,6 +49,12 @@
                     these plugins are installed (or, if not, try to (re-) install them) before
                     compilation. This accepts a few different types of plugin specifiers documented
                     in the table below.</propdesc>
+            </property>
+            <property>
+                <proptype><codeph>transtype</codeph></proptype>
+                <propvalue><codeph>string</codeph></propvalue>
+                <propdesc>The documents transtype. Gets passed to the <codeph>-f</codeph> argument
+                    of the <cmdname>dita</cmdname> command.</propdesc>
             </property>
         </properties>
         <section id="section_prw_bqh_zlb">
