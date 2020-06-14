@@ -10,6 +10,7 @@ const checkDependencies = require('./helpers/dependency-check');
 const readConfig = require('./helpers/read-config');
 const processDita = require('./helpers/process-dita');
 const installTempDita = require('./helpers/install-dita-ot');
+const { sync: glob } = require('glob');
 
 program
     .name('dita-ot-helper')
@@ -18,10 +19,10 @@ program
         'A little helper for automating some of the more tedious tasks of automation with the DITA Open Toolkit'
     );
 
-let confFilePath = null;
+let configPathGlob = null;
 
-program.arguments('<conf>').action((conf) => {
-    confFilePath = conf;
+program.arguments('<confgGlob>').action((configGlob) => {
+    configPathGlob = configGlob;
 });
 
 program.option(
@@ -37,13 +38,13 @@ program.option(
 
 program.parse(process.argv);
 
-processConfigFile(confFilePath);
+compile(configPathGlob);
 
 /**
  * Processes a single config file
- * @param {string} configFilePath The path to the JSON config file
+ * @param {string} configFileGlob The path to the JSON config file
  */
-async function processConfigFile(configFilePath) {
+async function compile(configFileGlob) {
     console.info('> Checking dependencies');
     checkDependencies(program['install'] ? [] : ['dita']);
     console.info('> Dependency check complete');
@@ -74,15 +75,24 @@ async function processConfigFile(configFilePath) {
         );
     }
 
-    console.info('> Reading config file');
-    const config = readConfig(configFilePath);
-    console.info('> Processing config file');
-    processDita(
-        ditaInstallation.dita,
-        configFilePath,
-        config,
-        !program['verbose']
-    );
+    console.info('> Detecting config files...');
+    const configFiles = glob(configFileGlob, {});
+    console.info(`> Detected ${configFiles.length} config files:`);
+    console.info(configFiles.map((path) => `- ${path}`).join('\n'));
+    for (const configFilePath of configFiles) {
+        console.info(ch.blue(`> Processing config file ${configFilePath}`));
+        console.info(`> Parsing config file...`);
+        const config = readConfig(configFilePath);
+        console.info('> Processing config file');
+        processDita(
+            ditaInstallation.dita,
+            configFilePath,
+            config,
+            !program['verbose']
+        );
+        console.info(`> Processing complete`);
+        console.info(ch.green(`> Finished with config file ${configFilePath}`));
+    }
     console.info('> Compilation complete. Cleaning up...');
     await ditaInstallation.clean();
     console.info('> Complete');

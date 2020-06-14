@@ -1,0 +1,8 @@
+{
+  "input": "input.dita",
+  "plugins": [
+    "org.dita.html5"
+  ],
+  "transtype": "html5",
+  "output": "html"
+}

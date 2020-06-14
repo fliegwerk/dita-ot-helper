@@ -5,7 +5,7 @@ const { zipSync } = require('cross-zip');
 const { quote } = require('shell-quote');
 
 function installDITAPlugin(ditaExecPath, pluginPath, silent) {
-    console.log(`> Installing plugin ${pluginPath}`);
+    console.info(`> Installing plugin ${pluginPath}`);
 
     const pluginName = path.basename(pluginPath);
     try {
@@ -51,7 +51,9 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
         config['transtype'], // -f argument
         '-i',
         path.resolve(configDir, config['input']), // -i argument
-        ...(config['output'] ? ['-o', path.resolve(configDir, config['output'])] : []), // -o argument
+        ...(config['output']
+            ? ['-o', path.resolve(configDir, config['output'])]
+            : []), // -o argument
         ...(config['propertyfile']
             ? [
                   '--porpertyfile=',
