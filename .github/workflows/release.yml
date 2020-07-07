@@ -12,4 +12,4 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - run: "echo npm version ${{github.events.inputs.releaseType}}"
+      - run: "echo npm version ${{github.events.inputs.releaseType}} $INPUT_RELEASETYPE"
