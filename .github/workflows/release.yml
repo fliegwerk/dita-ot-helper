@@ -12,5 +12,5 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+    - run: |
         echo "Release Type: ${{ github.event.inputs.releaseType }}"
