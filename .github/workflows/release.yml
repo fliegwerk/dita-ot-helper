@@ -1,0 +1,15 @@
+name: Release and Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseType:
+        description: 'Release Type (major|minor|patch)'
+        required: true
+        default: 'patch'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo npm version ${{github.events.inputs.releaseType}}
