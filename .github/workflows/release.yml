@@ -20,6 +20,9 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12
+    - run: |
+        git config --local user.email "contact@pabloklaschka.de"
+        git config --local user.name "Release Action"
     - run: npm ci
     - name: Linting
       run: npm run lint
