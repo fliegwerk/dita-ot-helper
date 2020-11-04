@@ -33,7 +33,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.0.0",
-    "cross-zip": "^3.1.0",
+    "cross-zip": "^4.0.0",
     "glob": "^7.1.6",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.8",
