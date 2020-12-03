@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+## [0.12.0] - 2020-12-03
 
 ### Added
 
@@ -18,8 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   `propertyfile` option now gets passed to the `dita` command correctly
-
-### Security
 
 ## [0.11.1] - 2020-06-14
 
@@ -179,3 +184,4 @@ Initial prerelease.
 [0.10.5]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.4...v0.10.5
 [0.11.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.5...v0.11.0
 [0.11.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.0...v0.11.1
+[0.12.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.1...v0.12.0
