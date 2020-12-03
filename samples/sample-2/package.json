@@ -1,13 +1,13 @@
 {
-  "name": "sample-2",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "npm run build",
-    "build": "dita-ot-helper -i 3.5.1 config.json"
-  },
-  "author": "Pablo Klaschka",
-  "license": "MIT",
-  "dependencies": {
-    "dita-ot-helper": "file:../.."
-  }
+    "name": "sample-2",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "npm run build",
+        "build": "dita-ot-helper -v config.json"
+    },
+    "author": "Pablo Klaschka",
+    "license": "MIT",
+    "dependencies": {
+        "dita-ot-helper": "file:../.."
+    }
 }

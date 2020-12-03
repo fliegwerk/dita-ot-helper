@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="topic">
-  <title>Test</title>
-  <body>
-  <p>This is a test</p>
-  </body>
-</topic>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="topic">
+    <title>Test</title>
+    <prereq>
+        Some pre-requirement
+    </prereq>
+    <steps>
+        <step><cmd>Do something</cmd></step>
+        <step><cmd>Do something else</cmd></step>
+    </steps>
+    <result>
+        Some result
+    </result>
+</task>

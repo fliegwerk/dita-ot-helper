@@ -56,7 +56,7 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
             : []), // -o argument
         ...(config['propertyfile']
             ? [
-                  '--porpertyfile=',
+                  '--propertyfile',
                   path.resolve(configDir, config['propertyfile']),
               ]
             : []), // --propertyfile argument
