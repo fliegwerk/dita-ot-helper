@@ -14,14 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 ## [0.12.0] - 2020-12-03
 
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 -   `propertyfile` option now gets passed to the `dita` command correctly
