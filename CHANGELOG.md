@@ -8,11 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
-- Updated `commander` dependency to `v7.0.0`
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
+## [0.12.1] - 2021-01-18
+### Changed
+- Updated `commander` dependency to `v7.0.0`
 ## [0.12.0] - 2020-12-03
 
 ### Fixed
@@ -178,3 +180,4 @@ Initial prerelease.
 [0.11.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.10.5...v0.11.0
 [0.11.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.0...v0.11.1
 [0.12.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.1...v0.12.0
+[0.12.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.12.0...v0.12.1
