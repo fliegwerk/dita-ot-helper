@@ -8,10 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+- Set default DITA OT version to `3.6.0`
 - switched from `request` to `node-fetch`, reducing the package size significantly
 ### Deprecated
 ### Removed
 ### Fixed
+- Support for `.0` versions, e.g., `3.6.0`
 ### Security
 ## [0.12.1] - 2021-01-18
 ### Changed

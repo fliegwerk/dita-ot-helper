@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2020 by Pablo Klaschka
  */
-let defaultDitaOTVersion = '3.5.1';
+let defaultDitaOTVersion = '3.6.0';
 
 const { program } = require('commander');
 const ch = require('chalk');

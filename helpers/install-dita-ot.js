@@ -10,8 +10,25 @@ const fetch = require('node-fetch');
 
 const tempDir = shell.tempdir();
 
-const getDownloadLink = (version) =>
-    `https://github.com/dita-ot/dita-ot/releases/download/${version}/dita-ot-${version}.zip`;
+/**
+ * DITA OT, in its release numbers, drops a trailing `'.0'`, i.e., `3.6.0` => `3.6`
+ *
+ * This function converts a valid semantic version number to the DITA OT equivalent.
+ * @param version
+ * @return {string}
+ */
+const getCorrectedVersion = (version) => {
+    if (version.endsWith('.0')) {
+        version = version.substring(0, version.length - 2);
+    }
+    return version;
+};
+
+const getDownloadLink = (version) => {
+    version = getCorrectedVersion(version);
+
+    return `https://github.com/dita-ot/dita-ot/releases/download/${version}/dita-ot-${version}.zip`;
+};
 
 /**
  *
@@ -33,7 +50,12 @@ async function downloadDitaOT(version) {
         console.info(`> Unzipping complete...`);
 
         return {
-            dita: path.join(ditaDir, `dita-ot-${version}`, 'bin', 'dita'),
+            dita: path.join(
+                ditaDir,
+                `dita-ot-${getCorrectedVersion(version)}`,
+                'bin',
+                'dita'
+            ),
             clean: () => shell.rm('-rf', ditaDir),
         };
     } catch (e) {
