@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+- switched from `request` to `node-fetch`, reducing the package size significantly
 ### Deprecated
 ### Removed
 ### Fixed

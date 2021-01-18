@@ -5,8 +5,8 @@ const fs = require('fs');
 const path = require('path');
 const shell = require('shelljs');
 const ch = require('chalk');
-const request = require('request-promise-native');
 const { unzipSync } = require('cross-zip');
+const fetch = require('node-fetch');
 
 const tempDir = shell.tempdir();
 
@@ -20,14 +20,11 @@ const getDownloadLink = (version) =>
 async function downloadDitaOT(version) {
     try {
         console.info(`> Downloading DITA-OT ${version}`);
-        const res = await request.get(getDownloadLink(version), {
-            encoding: null,
-            gzip: true,
-        });
+        const res = await fetch(getDownloadLink(version));
 
         console.info(`> Download complete, unzipping...`);
         const zipPath = path.join(tempDir, 'dita.zip');
-        fs.writeFileSync(zipPath, res, 'binary');
+        fs.writeFileSync(zipPath, await res.buffer(), 'binary');
 
         // const ditaDir = path.join(tempDir, 'dita');
         const ditaDir = fs.mkdtempSync(path.join(tempDir, 'dita-ot-helper'));

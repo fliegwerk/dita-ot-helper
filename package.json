@@ -35,8 +35,7 @@
     "commander": "^7.0.0",
     "cross-zip": "^4.0.0",
     "glob": "^7.1.6",
-    "request": "^2.88.2",
-    "request-promise-native": "^1.0.8",
+    "node-fetch": "^2.6.1",
     "shell-quote": "^1.7.2",
     "shelljs": "^0.8.4"
   },
