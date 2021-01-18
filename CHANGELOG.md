@@ -8,13 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
-- Set default DITA OT version to `3.6.0`
-- switched from `request` to `node-fetch`, reducing the package size significantly
 ### Deprecated
 ### Removed
 ### Fixed
-- Support for `.0` versions, e.g., `3.6.0`
 ### Security
+## [0.13.0] - 2021-01-18
+### Changed
+- Set default DITA OT version to `3.6.0`
+- switched from `request` to `node-fetch`, reducing the package size significantly
+### Fixed
+- Support for `.0` versions, e.g., `3.6.0`
 ## [0.12.1] - 2021-01-18
 ### Changed
 - Updated `commander` dependency to `v7.0.0`
@@ -184,3 +187,4 @@ Initial prerelease.
 [0.11.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.0...v0.11.1
 [0.12.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.11.1...v0.12.0
 [0.12.1]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.12.0...v0.12.1
+[0.13.0]: https://github.com/fliegwerk/dita-ot-helper/compare/v0.12.1...v0.13.0

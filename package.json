@@ -1,6 +1,6 @@
 {
   "name": "dita-ot-helper",
-  "version": "0.12.1",
+  "version": "0.13.0",
   "description": "A little helper for automating some of the more tedious tasks of automation with the DITA Open Toolkit",
   "repository": "https://github.com/fliegwerk/dita-ot-helper.git",
   "bugs": "https://github.com/fliegwerk/dita-ot-helper/issues",
