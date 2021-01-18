@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+- Updated `commander` dependency to `v7.0.0`
 ### Deprecated
 ### Removed
 ### Fixed

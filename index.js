@@ -45,8 +45,10 @@ compile(configPathGlob);
  * @param {string} configFileGlob The path to the JSON config file
  */
 async function compile(configFileGlob) {
+    const options = program.opts();
+
     console.info('> Checking dependencies');
-    checkDependencies(program['install'] ? [] : ['dita']);
+    checkDependencies(options['install'] ? [] : ['dita']);
     console.info('> Dependency check complete');
 
     let ditaInstallation = {
@@ -54,10 +56,10 @@ async function compile(configFileGlob) {
         dita: 'dita',
     };
 
-    if (program['install'] !== undefined) {
+    if (options['install'] !== undefined) {
         const isSpecifiedDitaOTVersionValid =
-            typeof program['install'] === 'string' &&
-            /^\d+\.\d+(\.\d+)?$/.test(program['install']);
+            typeof options['install'] === 'string' &&
+            /^\d+\.\d+(\.\d+)?$/.test(options['install']);
 
         if (!isSpecifiedDitaOTVersionValid) {
             console.warn(
@@ -70,7 +72,7 @@ async function compile(configFileGlob) {
 
         ditaInstallation = await installTempDita(
             isSpecifiedDitaOTVersionValid
-                ? program['install']
+                ? options['install']
                 : defaultDitaOTVersion
         );
     }
@@ -88,7 +90,7 @@ async function compile(configFileGlob) {
             ditaInstallation.dita,
             configFilePath,
             config,
-            !program['verbose']
+            !options['verbose']
         );
         console.info(`> Processing complete`);
         console.info(ch.green(`> Finished with config file ${configFilePath}`));
