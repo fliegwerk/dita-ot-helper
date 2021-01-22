@@ -86,6 +86,31 @@ function processConfigFiles(configFiles, ditaInstallation, options) {
 }
 
 /**
+ * Checks the DITA version passed in `options['install']` for validity.
+ *
+ * Logs a warning stating dita-ot-helper will use the default version if the
+ * version is not valid.
+ *
+ * @param options - the options passed to the CLI
+ * @return {boolean} `true` if the version is valid and can be used
+ */
+function checkDITAVersionToInstall(options) {
+    const isSpecifiedDitaOTVersionValid =
+        typeof options['install'] === 'string' &&
+        /^\d+\.\d+(\.\d+)?$/.test(options['install']);
+
+    if (!isSpecifiedDitaOTVersionValid) {
+        console.warn(
+            ch.yellow(
+                'Invalid DITA version specified. Using version ' +
+                    defaultDitaOTVersion
+            )
+        );
+    }
+    return isSpecifiedDitaOTVersionValid;
+}
+
+/**
  * Gets a DITA installation and, if specified in `options`, installs a temporary one.
  * @param options - the options passed to the CLI
  * @return {Promise<{clean: function(), dita: string}>} the specification of
@@ -99,18 +124,9 @@ async function getDITAInstallation(options) {
     };
 
     if (options['install'] !== undefined) {
-        const isSpecifiedDitaOTVersionValid =
-            typeof options['install'] === 'string' &&
-            /^\d+\.\d+(\.\d+)?$/.test(options['install']);
-
-        if (!isSpecifiedDitaOTVersionValid) {
-            console.warn(
-                ch.yellow(
-                    'Invalid DITA version specified. Using version ' +
-                        defaultDitaOTVersion
-                )
-            );
-        }
+        const isSpecifiedDitaOTVersionValid = checkDITAVersionToInstall(
+            options
+        );
 
         ditaInstallation = await installTempDita(
             isSpecifiedDitaOTVersionValid
