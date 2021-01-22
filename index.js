@@ -50,7 +50,49 @@ async function compile(configFileGlob) {
     console.info('> Checking dependencies');
     checkDependencies(options['install'] ? [] : ['dita']);
     console.info('> Dependency check complete');
+    const ditaInstallation = await getDITAInstallation(options);
 
+    console.info('> Detecting config files...');
+    const configFiles = glob(configFileGlob, {});
+    console.info(`> Detected ${configFiles.length} config files:`);
+    console.info(configFiles.map((path) => `- ${path}`).join('\n'));
+    processConfigFiles(configFiles, ditaInstallation, options);
+    console.info('> Compilation complete. Cleaning up...');
+    await ditaInstallation.clean();
+    console.info('> Complete');
+}
+
+/**
+ * Processes the config files in order.
+ * @param {string[]} configFiles - the config files
+ * @param ditaInstallation - the DITA installation details
+ * @param options - the options passed to the CLI
+ */
+function processConfigFiles(configFiles, ditaInstallation, options) {
+    for (const configFilePath of configFiles) {
+        console.info(ch.blue(`> Processing config file ${configFilePath}`));
+        console.info(`> Parsing config file...`);
+        const config = readConfig(configFilePath);
+        console.info('> Processing config file');
+        processDita(
+            ditaInstallation.dita,
+            configFilePath,
+            config,
+            !options['verbose']
+        );
+        console.info(`> Processing complete`);
+        console.info(ch.green(`> Finished with config file ${configFilePath}`));
+    }
+}
+
+/**
+ * Gets a DITA installation and, if specified in `options`, installs a temporary one.
+ * @param options - the options passed to the CLI
+ * @return {Promise<{clean: function(), dita: string}>} the specification of
+ * the dir including a `clean` function for cleaning temporary installations,
+ * if applicable
+ */
+async function getDITAInstallation(options) {
     let ditaInstallation = {
         clean: () => {},
         dita: 'dita',
@@ -76,26 +118,5 @@ async function compile(configFileGlob) {
                 : defaultDitaOTVersion
         );
     }
-
-    console.info('> Detecting config files...');
-    const configFiles = glob(configFileGlob, {});
-    console.info(`> Detected ${configFiles.length} config files:`);
-    console.info(configFiles.map((path) => `- ${path}`).join('\n'));
-    for (const configFilePath of configFiles) {
-        console.info(ch.blue(`> Processing config file ${configFilePath}`));
-        console.info(`> Parsing config file...`);
-        const config = readConfig(configFilePath);
-        console.info('> Processing config file');
-        processDita(
-            ditaInstallation.dita,
-            configFilePath,
-            config,
-            !options['verbose']
-        );
-        console.info(`> Processing complete`);
-        console.info(ch.green(`> Finished with config file ${configFilePath}`));
-    }
-    console.info('> Compilation complete. Cleaning up...');
-    await ditaInstallation.clean();
-    console.info('> Complete');
+    return ditaInstallation;
 }

@@ -34,18 +34,8 @@ function installDITAPlugin(ditaExecPath, pluginPath, silent) {
     }
 }
 
-module.exports = function (ditaExecPath, configPath, config, silent = true) {
-    const configDir = path.dirname(path.resolve(process.cwd(), configPath));
-    if (config.plugins && config.plugins.length) {
-        for (const pluginPath of config.plugins)
-            installDITAPlugin(
-                ditaExecPath,
-                path.join(configDir, pluginPath),
-                silent
-            );
-    }
-
-    const cmd = quote([
+function getCommand(ditaExecPath, config, configDir) {
+    return quote([
         ditaExecPath,
         '-f',
         config['transtype'], // -f argument
@@ -64,6 +54,20 @@ module.exports = function (ditaExecPath, configPath, config, silent = true) {
             ? ['-r', path.resolve(configDir, config['resource'])]
             : []), // -r argument
     ]);
+}
+
+module.exports = function (ditaExecPath, configPath, config, silent = true) {
+    const configDir = path.dirname(path.resolve(process.cwd(), configPath));
+    if (config.plugins && config.plugins.length) {
+        for (const pluginPath of config.plugins)
+            installDITAPlugin(
+                ditaExecPath,
+                path.join(configDir, pluginPath),
+                silent
+            );
+    }
+
+    const cmd = getCommand(ditaExecPath, config, configDir);
 
     shell.exec(cmd, {
         silent,

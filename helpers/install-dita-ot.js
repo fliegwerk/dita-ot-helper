@@ -26,7 +26,6 @@ const getCorrectedVersion = (version) => {
 
 const getDownloadLink = (version) => {
     version = getCorrectedVersion(version);
-
     return `https://github.com/dita-ot/dita-ot/releases/download/${version}/dita-ot-${version}.zip`;
 };
 
