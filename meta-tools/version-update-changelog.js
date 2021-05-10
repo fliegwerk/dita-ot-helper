@@ -99,9 +99,8 @@ try {
     for (let i = unreleasedHeadingIndex + 1; i < changelogLines.length; i++) {
         if (changelogLines[i].startsWith('## [')) {
             previousVersionIndex = i;
-            previousVersionNumber = changelogLines[i].match(
-                /^## \[(.*)].*$/
-            )[1];
+            previousVersionNumber =
+                changelogLines[i].match(/^## \[(.*)].*$/)[1];
             break;
         }
     }

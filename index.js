@@ -124,9 +124,8 @@ async function getDITAInstallation(options) {
     };
 
     if (options['install'] !== undefined) {
-        const isSpecifiedDitaOTVersionValid = checkDITAVersionToInstall(
-            options
-        );
+        const isSpecifiedDitaOTVersionValid =
+            checkDITAVersionToInstall(options);
 
         ditaInstallation = await installTempDita(
             isSpecifiedDitaOTVersionValid
