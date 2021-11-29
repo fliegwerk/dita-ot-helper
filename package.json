@@ -35,7 +35,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^5.0.0",
     "commander": "^8.0.0",
     "cross-zip": "^4.0.0",
     "glob": "^7.1.6",
