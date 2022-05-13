@@ -38,7 +38,7 @@
     "chalk": "^4.1.0",
     "commander": "^9.0.0",
     "cross-zip": "^4.0.0",
-    "glob": "^7.1.6",
+    "glob": "^8.0.2",
     "node-fetch": "^3.0.0",
     "shell-quote": "^1.7.2",
     "shelljs": "^0.8.4"
