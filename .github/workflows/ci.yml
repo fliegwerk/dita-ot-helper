@@ -20,7 +20,7 @@ jobs:
         run: npm run lint
       - run: zip build.zip -r .
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: Build
           path: build.zip
