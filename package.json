@@ -39,7 +39,7 @@
     "commander": "9.3.0",
     "cross-zip": "4.0.0",
     "glob": "7.2.3",
-    "node-fetch": "3.2.5",
+    "node-fetch": "3.2.6",
     "shell-quote": "1.7.3",
     "shelljs": "0.8.5"
   },
