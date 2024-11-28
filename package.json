@@ -40,7 +40,7 @@
     "cross-zip": "4.0.1",
     "glob": "7.2.3",
     "node-fetch": "3.3.2",
-    "shell-quote": "1.8.1",
+    "shell-quote": "1.8.2",
     "shelljs": "0.8.5"
   },
   "devDependencies": {
